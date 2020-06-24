@@ -1,0 +1,22 @@
+{
+  "name": "discord-squad-shuffle",
+  "version": "0.0.1",
+  "description": "Discord bot for squad shuffle",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivgtr/discord-squad-shuffle.git"
+  },
+  "keywords": [
+    "discord"
+  ],
+  "author": "ivgtr <gear.1112t.o@gmail.com> (https://github.com/ivgtr)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ivgtr/discord-squad-shuffle/issues"
+  },
+  "homepage": "https://github.com/ivgtr/discord-squad-shuffle#readme"
+}
