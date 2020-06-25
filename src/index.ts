@@ -50,6 +50,7 @@ client.on('message', (message) => {
       } else {
         const num = Number(message.content.split(' ')[2] || 1)
         const member = message.mentions.members.first()
+        if (!Number.isInteger(num)) return
         if (!member) return
         if (!member.voice.channel) return
         const names = member.voice.channel.members.map((m) => m.user.tag)
