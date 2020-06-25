@@ -1,5 +1,6 @@
 # discord-squad-shuffle
 [![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
+![CI](https://github.com/ivgtr/discord-squad-shuffle/workflows/CI/badge.svg)
 
 ### これは何?
 ##### Discordのボイスチャンネルに参加している人をランダムにチーム分けするbot
