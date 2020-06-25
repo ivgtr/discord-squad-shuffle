@@ -26,7 +26,7 @@ export const shuffle = (
         embed: {
           color: 16757683,
           author: {
-            name: `${num}チームを作ります`
+            name: `${teamLength}人のチームを${num}チーム作ります`
           },
           description: outputText.join('\n')
         }
