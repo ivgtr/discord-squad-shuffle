@@ -24,8 +24,7 @@ client.on('message', async (message) => {
     if (!message.member) return
     if (message.mentions.members.size <= 1) {
       const start = message.content.split(' ')[0] || 'error'
-      const first = Number(message.content.split(' ')[1] || 1)
-      const second = Number(message.content.split(' ')[2] || 1)
+      const num = Number(message.content.split(' ')[1] || 1)
       let pattern: string
       switch (start) {
         case '!t':
@@ -47,13 +46,13 @@ client.on('message', async (message) => {
           return
         }
         const names = member.voice.channel.members.map((m) => m.displayName)
-        shuffle(message, pattern, names, first, second)
+        shuffle(message, pattern, names, num)
       } else {
         const member = message.mentions.members.first()
         if (!member) return
         if (!member.voice.channel) return
         const names = member.voice.channel.members.map((m) => m.user.tag)
-        shuffle(message, pattern, names, first, second)
+        shuffle(message, pattern, names, num)
       }
     } else {
       message.channel.send('メンバーは1人を指定してください')

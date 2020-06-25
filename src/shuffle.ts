@@ -5,8 +5,7 @@ export const shuffle = (
   message: Discord.Message,
   type: string,
   names: string[],
-  num = 1,
-  members = 1
+  num = 1
 ): void => {
   if (type === 'team') {
     const shuffleNames = action(names)
