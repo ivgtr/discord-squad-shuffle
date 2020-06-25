@@ -12,7 +12,7 @@ client.on('ready', () => {
   }
 })
 
-client.on('message', async (message) => {
+client.on('message', (message) => {
   // 自分の発言を無視
   if (message.author.bot) return
 
@@ -24,7 +24,6 @@ client.on('message', async (message) => {
     if (!message.member) return
     if (message.mentions.members.size <= 1) {
       const start = message.content.split(' ')[0] || 'error'
-      const num = Number(message.content.split(' ')[1] || 1)
       let pattern: string
       switch (start) {
         case '!t':
@@ -38,6 +37,7 @@ client.on('message', async (message) => {
           break
       }
       if (!message.mentions.members.size) {
+        const num = Number(message.content.split(' ')[1] || 1)
         const { member } = message
         if (!member.voice.channel) {
           message.channel.send(
@@ -48,6 +48,7 @@ client.on('message', async (message) => {
         const names = member.voice.channel.members.map((m) => m.displayName)
         shuffle(message, pattern, names, num)
       } else {
+        const num = Number(message.content.split(' ')[2] || 1)
         const member = message.mentions.members.first()
         if (!member) return
         if (!member.voice.channel) return
